@@ -1,4 +1,5 @@
 package Exceptions;
 
-public class InvalidAmountException {
+public class InvalidAmountException extends Exception {
+    public InvalidAmountException(String message) { super(message); }
 }

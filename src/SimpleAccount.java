@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+import Exceptions.InvalidNameException;
 
-public class SimpleAccount {
+public class SimpleAccount extends Account {
+    public SimpleAccount(String name) throws InvalidNameException, javax.naming.InvalidNameException {
+        super(name);
+    }
 }
+
