@@ -12,7 +12,7 @@ import Exceptions.InvalidNameException;
 public class Bank {
     private final Map<String, Account> accounts = new ConcurrentHashMap<String, Account>();
 
-    public Account createAccount(String name) throws InvalidNameException, javax.naming.InvalidNameException {
+    public Account createAccount(String name) throws InvalidNameException {
         Account acc = new SimpleAccount(name);
         accounts.put(acc.getAccountNumber(), acc);
         return acc;
@@ -50,6 +50,7 @@ public class Bank {
         synchronized (first) {
             synchronized (second) {
                 a1.withdraw(amount);
+                a2.deposit(amount);
             }
         }
     }

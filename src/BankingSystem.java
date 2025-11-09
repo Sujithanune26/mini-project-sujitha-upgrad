@@ -59,8 +59,6 @@ public class BankingSystem {
             System.out.println(acc);
         } catch (InvalidNameException ine) {
             System.out.println("Failed to create account: " + ine.getMessage());
-        } catch (javax.naming.InvalidNameException e) {
-            throw new RuntimeException(e);
         }
     }
 
