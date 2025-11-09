@@ -2,9 +2,6 @@ import Exceptions.AccountNotFoundException;
 import Exceptions.InvalidNameException;
 
 import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 public class BankingSystem {
     private static final Scanner input = new Scanner(System.in);
@@ -77,7 +74,6 @@ public class BankingSystem {
                     case 3 -> handleTransfer(accNo);
                     case 4 -> showBalance(accNo);
                     case 5 -> back = true;
-//                    case 6 -> runConcurrentSimulation(accNo);
                     default -> System.out.println("Invalid choice");
                 }
             }
@@ -93,7 +89,6 @@ public class BankingSystem {
         System.out.println("3. Transfer");
         System.out.println("4. Show balance");
         System.out.println("5. Return to main menu");
-        System.out.println("6. (Demo) Run concurrent transactions on this account");
         System.out.print("Enter choice: ");
     }
 

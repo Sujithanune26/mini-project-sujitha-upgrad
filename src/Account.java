@@ -28,7 +28,7 @@ public  abstract class Account {
         String[] parts=name.trim().split("\\s+");
         if (parts.length==1) initials =parts[0].substring(0,2).toUpperCase();
         else initials=(""+parts[0].charAt(0)+parts[parts.length-1].charAt(0)).toUpperCase();
-        int num=1000+RAND.nextInt(9000);
+        int num=1000+RAND.nextInt(8999);
         return initials+num;
     }
     public String getAccountNumber() {
